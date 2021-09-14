@@ -7,7 +7,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Commercial transportation company specializing in Dry Bulk, 
+          Refrigerated & Heavy duty Hauling since 2012. 
+          Let us assist you with your transportation needs in a safer 
+          punctual cost effective manner.
         </p>
         <a
           className="App-link"
@@ -15,7 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn More
         </a>
       </header>
     </div>
