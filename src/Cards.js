@@ -8,15 +8,25 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
  
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 500,
-    borderRadius: '20px',
+    [theme.breakpoints.down('sm')]: {
+      margin: '20px',
+      width: '80vw'
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '300px',
+      height: '300px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: 500,
+      borderRadius: '20px',
+    },
   },
   media: {
     height: 140,
   },
-});
+}));
 
 export default function MediaCard(props) {
   const classes = useStyles();

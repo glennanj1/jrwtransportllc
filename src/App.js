@@ -30,20 +30,63 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   header: {
-    display: 'flex',
-    justifyContent: 'center',
-    textAlign: 'center',
-    color: 'white',
-    // textShadow: '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
-    fontFamily: 'Black Ops One, cursive',
-    fontSize: '8vw',
-    padding: '25px',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+      alignContent: 'center',
+      textAlign: 'center',
+      color: 'white',
+      // textShadow: '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
+      fontFamily: 'Black Ops One, cursive',
+      fontSize: '40px',
+      width: '100vw',
+      height: '80vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      textAlign: 'center',
+      color: 'white',
+      // textShadow: '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
+      fontFamily: 'Black Ops One, cursive',
+      fontSize: '8vw',
+      width: '100vw',
+      height: '100vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      textAlign: 'center',
+      color: 'white',
+      // textShadow: '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
+      fontFamily: 'Black Ops One, cursive',
+      fontSize: '8vw',
+      width: '100vw',
+      height: '100vh',
+    },
   },
   carddiv: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingBottom: '200px',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      paddingBottom: '100px',
+      flexWrap: 'wrap',
+      alignContent: 'space-around'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      paddingBottom: '200px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      paddingBottom: '200px',
+    },
   },
   appbar: {
     background: '#014f99b8',
@@ -62,9 +105,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     bottom: '0px',
   },
-  outbox: {
-
-  }
 }));
 const video = 'https://d3ddatyom1hv87.cloudfront.net/trucking_video.mp4'
 
