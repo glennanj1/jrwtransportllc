@@ -7,12 +7,14 @@ import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 import Cards from './Cards'
-import bgpic from './images/jrwpic.jpg'
+import bgpic from './images/bigblue2.png'
 import dry from './images/drybulk.jpg'
 import orange from './images/orangetruck.png'
 import white from './images/whitetruck.png'
 import RoomIcon from '@material-ui/icons/Room';
-import { red } from '@material-ui/core/colors';
+// import { red } from '@material-ui/core/colors';
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     textAlign: 'center',
     color: 'white',
-    textShadow: '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
-    fontFamily: 'Roboto',
+    // textShadow: '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
+    fontFamily: 'Black Ops One, cursive',
     fontSize: '8vw',
     padding: '25px',
   },
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingBottom: '400px',
+    paddingBottom: '200px',
   },
   appbar: {
     background: '#014f99b8',
@@ -54,13 +56,15 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
   },
   container: {
-    background: 'red',
     backgroundImage: `url(${bgpic})`,
-    height: '100vh',
-    width: '100vw',
+    width: '100%',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
+    bottom: '0px',
   },
+  outbox: {
+
+  }
 }));
 const video = 'https://d3ddatyom1hv87.cloudfront.net/trucking_video.mp4'
 
@@ -82,22 +86,22 @@ export default function App() {
           </Typography>
           
           <Button color="inherit" title="Google Maps"><RoomIcon /></Button>
+
+          
         </Toolbar>
       </AppBar>
       <h1 className={classes.header}>
-          Commercial transportation company 
+          JRW Commercial transportation company 
       </h1>
       <div className={classes.carddiv}>
         <Cards title="Dry Bulk" text="Our services are top notch" image={dry} />
         <Cards title="Refridgerated" text="Keeping Your Product Cool" image={white} />
         <Cards title="Hauling" text="Haul weights up to XXX" image={orange} />
       </div>
-      <div className={classes.container}>
-        <div className={classes.carddiv}>
-          <Cards title="Dry Bulk" text="Our services are top notch" image={dry} />
-          <Cards title="Refridgerated" text="Keeping Your Product Cool" image={white} />
-          <Cards title="Hauling" text="Haul weights up to XXX" image={orange} />
-        </div>
+      <div className={classes.outbox}>
+        <img className={classes.container} src={bgpic} alt='truck'/>
+        
+       
       </div>
 
     </div>
