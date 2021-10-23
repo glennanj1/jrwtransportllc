@@ -4,15 +4,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
 import Cards from './Cards'
 import bgpic from './images/bigblue2.png'
 import dry from './images/drybulk.jpg'
 import orange from './images/orangetruck.png'
 import white from './images/whitetruck.png'
 import RoomIcon from '@material-ui/icons/Room';
-// import { red } from '@material-ui/core/colors';
+
 
 
 
@@ -21,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '100vw',
     height: '100vh',
+    display: 'block',
     
   },
   menuButton: {
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Black Ops One, cursive',
       fontSize: '40px',
       width: '100vw',
-      height: '80vh',
+      marginTop: '30%',
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',
@@ -133,6 +132,7 @@ export default function App() {
   }
 
   return (
+    <>
     <div className={classes.root}>
       <video className={classes.video} autoPlay loop playsInline defaultMuted muted>
 						<source src={video} type='video/mp4' />
@@ -153,8 +153,10 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <h1 className={classes.header}>
-          JRW Commercial transportation company 
+          A Premium Commercial transportation company 
       </h1>
+
+    </div>
       <div className={classes.carddiv}>
         <Cards title="Dry Bulk" text="Our services are top notch" image={dry} />
         <Cards title="Refridgerated" text="Keeping Your Product Cool" image={white} />
@@ -162,10 +164,7 @@ export default function App() {
       </div>
       <div className={classes.outbox}>
         <img className={classes.container} src={bgpic} alt='truck'/>
-        
-       
       </div>
-
-    </div>
+      </>
   );
 }
