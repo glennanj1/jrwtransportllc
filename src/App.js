@@ -92,11 +92,27 @@ const useStyles = makeStyles((theme) => ({
     background: '#014f99b8',
   },
   video: {
-    zIndex: -1,
+    [theme.breakpoints.down('sm')]: {
+      zIndex: -1,
+      objectFit: 'cover',
+      position: 'absolute',
+      height: '100%',
+      width: '100vw',
+      },
+    [theme.breakpoints.up('md')]: {
+      zIndex: -1,
+      objectFit: 'cover',
+      position: 'fixed',
+      height: '100%',
+      width: '100vw',
+      },
+    [theme.breakpoints.up('lg')]: {
+      zIndex: -1,
     objectFit: 'cover',
-    position: 'absolute',
+    position: 'fixed',
     height: '100%',
     width: '100vw',
+    },
   },
   container: {
     backgroundImage: `url(${bgpic})`,
