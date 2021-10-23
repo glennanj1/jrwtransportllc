@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Black Ops One, cursive',
       fontSize: '40px',
       width: '100vw',
-      marginTop: '30%',
+      marginTop: '40%',
     },
     [theme.breakpoints.up('md')]: {
       display: 'flex',
