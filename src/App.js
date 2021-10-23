@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     height: '100vh',
     display: 'block',
-    
+    paddingBottom: '50px'
   },
   menuButton: {
     marginRight: theme.spacing(2),
