@@ -94,8 +94,8 @@ const useStyles = makeStyles((theme) => ({
   video: {
     zIndex: -1,
     objectFit: 'cover',
-    position: 'fixed',
-    height: '100vh',
+    position: 'absolute',
+    height: '100%',
     width: '100vw',
   },
   container: {
