@@ -124,8 +124,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 const video = 'https://d3ddatyom1hv87.cloudfront.net/trucking_video.mp4'
 
+
 export default function App() {
   const classes = useStyles();
+
+  const handleClick = e => {
+    window.location.href = "https://goo.gl/maps/HAzSMZYVhitb6Z8H8";
+  }
+
   return (
     <div className={classes.root}>
       <video className={classes.video} autoPlay loop playsInline defaultMuted muted>
@@ -141,7 +147,7 @@ export default function App() {
             JRW Transport LLC
           </Typography>
           
-          <Button color="inherit" title="Google Maps"><RoomIcon /></Button>
+          <Button onClick={handleClick} color="inherit" title="Google Maps"><RoomIcon /></Button>
 
           
         </Toolbar>
