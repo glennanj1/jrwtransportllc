@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       zIndex: -1,
       objectFit: 'cover',
-      position: 'absolute',
+      position: 'fixed',
       height: '100%',
       width: '100vw',
       },
